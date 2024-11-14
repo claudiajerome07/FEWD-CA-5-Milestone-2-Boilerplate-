@@ -16,11 +16,18 @@ function App() {
 
     // Increment score if the answer is correct
     // Move to the next question
+
+    if (isCorrect) {
+      setScore(score + 1)
+    }
+    setCurrentQuestion(currentQuestion + 1)
   };
 
   // TASK 2: Write the logic to restart the quiz when this function is called.
   const restartQuiz = () => {
     // Reset score and current question
+    setCurrentQuestion(0)
+    setScore(0)
   };
 
   return (
